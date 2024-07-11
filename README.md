@@ -4,6 +4,6 @@
 - `source .venv/bin/activate` (optional)
 - `pip install -r requirements.txt`
 - `reflex run`
-- Open your browser and visit `localhost:3000` or `localhost:3001`<br/>
+- Open your browser and visit `localhost:3000`<br/>
   &nbsp;
 ![screenshot](https://i.meee.com.tw/siyrkMs.png)
