@@ -12,8 +12,8 @@ class State(rx.State):
 
 def render_user_entries(title: str, is_password: bool = False):
     return rx.vstack(
-        rx.text(title, color="gray", font_size="13px", weight="bold"),
-        rx.chakra.input(color="white", type_="text" if not is_password else "password"),
+        rx.text(title, color="gray", font_size="14px", weight="bold"),
+        rx.chakra.input(type_="text" if not is_password else "password"),
         width="100%",
     )
 
@@ -44,7 +44,20 @@ def render_main_component():
             align_items="center",
         ),
         rx.vstack(
-            rx.color_mode.button(position="top-right"),  # 切換淺/深色模式
+            # 淺深色模式切換器
+            rx.hstack(
+                rx.icon("sun", size=16),
+                rx.switch(
+                    checked=rx.style.color_mode != rx.style.LIGHT_COLOR_MODE,
+                    on_change=rx.style.toggle_color_mode,
+                    size="1",
+                ),
+                rx.icon("moon", size=16),
+                margin_left="380px",
+            ),
+            # 淺深色模式按鈕
+            # rx.color_mode.button(position="top-right"),  
+        
             rx.heading("系統登入", size="5"),
             render_user_entries("Email"),
             render_user_entries(
@@ -53,11 +66,13 @@ def render_main_component():
             ),
             rx.spacer(),
             render_event_trigger(),
+            # 超連結按鈕
             rx.link(
                 rx.button("Check out my Github"),
                 href="https://github.com/DreamCasterX",
                 is_external=True,
             ),
+            # Reflex廣告Logo
             rx.logo(),
             width="100%",
             padding_right="20px",  # 內置外框右側寬度
@@ -65,11 +80,11 @@ def render_main_component():
             padding="2em, 2em, 4em, 2em",
             spacing="5",
         ),
-        width=[600, 600, 500],  # 最大外框寬度
-        # width=["100%", "100%", "65%", "50%", "35%"],
-        bg="rgba(21,21,21,0.55)",
-        border="2px solid #2e2e2e",
-        border_radius="10px",
+        # 外框設置
+        width=[600, 600, 500],  # 最大外框寬度,
+        # bg="rgba(21,21,21,0.55)", # 預設app底色(灰)
+        border="1px solid #2e2e2e", # 邊界粗細
+        border_radius="13px", # 邊界圓角
         box_shadow="0px 8px 16px 6px rgba(0,0,0,0.25)",
     )
 
@@ -80,7 +95,7 @@ def index() -> rx.Component:
         width="100%",
         height="100vh",
         padding="2em",
-        bg="#121212",
+        # bg="#121212", #預設網頁底色(黑)
     )
 
 
