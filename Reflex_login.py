@@ -34,6 +34,7 @@ def render_event_trigger():
 def render_main_component():
     return rx.vstack(
         rx.hstack(
+            # Find avaialble icons in https://lucide.dev/icons/
             rx.icon(tag="lock", size=28, color="rgba(127, 127, 127, 1)"),
             width="100%",
             height="55px",
@@ -44,7 +45,7 @@ def render_main_component():
             align_items="center",
         ),
         rx.vstack(
-            rx.color_mode.button(position="top-right"),  # 切換淺/深色模式
+            rx.color_mode.button(position="top-right"),  # Switch Light/Dark mode
             rx.heading("系統登入", size="5"),
             render_user_entries("Email"),
             render_user_entries(
@@ -60,13 +61,12 @@ def render_main_component():
             ),
             rx.logo(),
             width="100%",
-            padding_right="20px",  # 內置外框右側寬度
-            padding_left="20px",  # 內置外框左側寬度
+            padding_right="20px",  # Inner frame right width
+            padding_left="20px",  # Inner frame left width
             padding="2em, 2em, 4em, 2em",
             spacing="5",
         ),
-        width=[600, 600, 500],  # 最大外框寬度
-        # width=["100%", "100%", "65%", "50%", "35%"],
+        width=[600, 600, 500],  # outer frame width
         bg="rgba(21,21,21,0.55)",
         border="0.75px solid #2e2e2e",
         border_radius="10px",
