@@ -54,11 +54,11 @@ def render_main_component():
                 ),
                 rx.icon("moon", size=16),
                 margin_left="380px",
+                margin_bottom="-10px",
             ),
             # 淺深色模式按鈕
-            # rx.color_mode.button(position="top-right"),  
-        
-            rx.heading("系統登入", size="5"),
+            # rx.color_mode.button(position="top-right"),
+            rx.heading("登入系統", size="5"),
             render_user_entries("Email"),
             render_user_entries(
                 title="Password",
@@ -83,8 +83,8 @@ def render_main_component():
         # 外框設置
         width=[600, 600, 500],  # 最大外框寬度,
         # bg="rgba(21,21,21,0.55)", # 預設app底色(灰)
-        border="1px solid #2e2e2e", # 邊界粗細
-        border_radius="13px", # 邊界圓角
+        border="1px solid #2e2e2e",  # 邊界粗細
+        border_radius="13px",  # 邊界圓角
         box_shadow="0px 8px 16px 6px rgba(0,0,0,0.25)",
     )
 
