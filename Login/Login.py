@@ -83,13 +83,12 @@ def render_main_component():
                 margin_top="-56px",
             ),
             # Reflex廣告Logo
-            rx.logo(size="2"),
+            rx.logo(),
             width="100%",
             padding_right="20px",  # 內置外框右側寬度
             padding_left="20px",  # 內置外框左側寬度
             padding="2em, 2em, 4em, 2em",
             spacing="5",
-
         ),
         # 外框設置
         width=[600, 600, 500],  # 最大外框寬度,
