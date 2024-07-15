@@ -20,13 +20,14 @@ def render_user_entries(title: str, is_password: bool = False):
 
 def render_event_trigger():
     return rx.badge(
-        rx.text("Login", text_align="center", width="100%"),
+        rx.text("Sign in", text_align="center", width="100%"),
         color_scheme="teal",
         variant="outline",
         size="2",
-        font_size="15px",
+        font_size="16px",
         width="100%",
         padding="0.75em 0em",
+        border_radius="18px",
     )
 
 
@@ -58,27 +59,37 @@ def render_main_component():
             ),
             # 淺深色模式按鈕
             # rx.color_mode.button(position="top-right"),
-            rx.heading("登入系統", size="5"),
-            render_user_entries("Email"),
+            rx.heading("Account Login", size="7", margin_left="150px"),
+            render_user_entries("✉️ Email"),
             render_user_entries(
-                title="Password",
+                title="🔑 Password",
                 is_password=True,
             ),
             rx.spacer(),
             render_event_trigger(),
             # 超連結按鈕
             rx.link(
-                rx.button("Check out my Github"),
+                rx.button("Create an account"),
                 href="https://github.com/DreamCasterX",
                 is_external=True,
+                margin_left="10px",
+            ),
+            # 超連結按鈕
+            rx.link(
+                rx.button("Forgot password"),
+                href="https://github.com/DreamCasterX",
+                is_external=True,
+                margin_left="318px",
+                margin_top="-56px",
             ),
             # Reflex廣告Logo
-            rx.logo(),
+            rx.logo(size="2"),
             width="100%",
             padding_right="20px",  # 內置外框右側寬度
             padding_left="20px",  # 內置外框左側寬度
             padding="2em, 2em, 4em, 2em",
             spacing="5",
+
         ),
         # 外框設置
         width=[600, 600, 500],  # 最大外框寬度,
