@@ -65,7 +65,8 @@ def render_main_component():
                 title="🔑 Password",
                 is_password=True,
             ),
-            rx.spacer(),
+            rx.checkbox(text="Remember me", font_color="grey"),
+            rx.spacer(), # 空白行
             render_event_trigger(),
             # 超連結按鈕
             rx.link(
@@ -76,19 +77,20 @@ def render_main_component():
             ),
             # 超連結按鈕
             rx.link(
-                rx.button("Forgot password"),
+                rx.button("Forgot password?"),
                 href="https://github.com/DreamCasterX",
                 is_external=True,
-                margin_left="318px",
+                margin_left="304px",
                 margin_top="-56px",
             ),
             # Reflex廣告Logo
-            rx.logo(),
+            rx.logo(size="2"),
             width="100%",
-            padding_right="20px",  # 內置外框右側寬度
-            padding_left="20px",  # 內置外框左側寬度
+            padding_right="25px",  # 內置外框右側寬度
+            padding_left="25px",  # 內置外框左側寬度
             padding="2em, 2em, 4em, 2em",
             spacing="5",
+
         ),
         # 外框設置
         width=[600, 600, 500],  # 最大外框寬度,
