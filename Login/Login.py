@@ -65,7 +65,7 @@ def render_main_component():
                 title="🔑 Password",
                 is_password=True,
             ),
-            rx.checkbox(text="Remember me", font_color="grey"),
+            rx.checkbox(text="Remember me"),
             rx.spacer(), # 空白行
             render_event_trigger(),
             # 超連結按鈕
@@ -82,6 +82,7 @@ def render_main_component():
                 is_external=True,
                 margin_left="304px",
                 margin_top="-56px",
+                color_scheme="red",
             ),
             # Reflex廣告Logo
             rx.logo(size="2"),
