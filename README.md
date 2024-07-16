@@ -6,5 +6,5 @@
 - `reflex run`
 - Open your browser and visit `localhost:3000`<br/>
   &nbsp;
-![screenshot](https://i.meee.com.tw/qRrNAK0.png)
-![screenshot](https://i.meee.com.tw/oDvfaMd.png)
+![screenshot](https://i.meee.com.tw/A2sdF9h.png)
+![screenshot](https://i.meee.com.tw/06fE3g5.png)
