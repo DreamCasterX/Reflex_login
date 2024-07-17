@@ -70,19 +70,20 @@ def render_main_component():
             render_event_trigger(),
             # 超連結按鈕
             rx.link(
-                rx.button("Create an account"),
+                rx.button("Create an account", text_decoration="underline"),
                 href="https://github.com/DreamCasterX",
                 is_external=True,
                 margin_left="10px",
             ),
             # 超連結按鈕
             rx.link(
-                rx.button("Forgot password?"),
+                rx.button("Forgot password?", text_decoration="underline"),
                 href="https://github.com/DreamCasterX",
                 is_external=True,
                 margin_left="304px",
                 margin_top="-56px",
                 color_scheme="red",
+  
             ),
             # Reflex廣告Logo
             rx.logo(size="2"),
